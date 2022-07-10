@@ -9,7 +9,9 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
+    @IBOutlet weak var signOut: UIButton!
     @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var welcomeBack: UILabel!
     @IBOutlet weak var mailLabel: UILabel!
     var nameText = ""
     var mailText = ""
@@ -18,6 +20,8 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        signOut.layer.cornerRadius = 20
+        welcomeBack.text = "Welcome Back \(nameText)!"
         userNameLabel.text = nameText
         mailLabel.text = mailText
     }

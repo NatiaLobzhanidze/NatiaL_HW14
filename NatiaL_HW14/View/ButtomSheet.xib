@@ -14,27 +14,52 @@
             <rect key="frame" x="0.0" y="0.0" width="413" height="283"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5ab-YN-M4B">
-                    <rect key="frame" x="20" y="64" width="373" height="199"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="5ab-YN-M4B">
+                    <rect key="frame" x="20" y="64" width="373" height="210"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure want to sign out?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHK-Qx-Hme">
-                            <rect key="frame" x="0.0" y="0.0" width="373" height="66.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="373" height="50"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                             <color key="textColor" red="0.96078431610000004" green="0.74509805439999999" blue="0.2588235438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Erb-fg-oNF">
-                            <rect key="frame" x="0.0" y="66.5" width="373" height="66"/>
+                            <rect key="frame" x="0.0" y="80" width="373" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Mv0-JL-Glz"/>
+                            </constraints>
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.84680590990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Yes"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="Yes">
+                                        <attributes>
+                                            <font key="NSFont" size="13" name="Helvetica-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </buttonConfiguration>
                             <connections>
                                 <action selector="yes:" destination="iN0-l3-epB" eventType="touchUpInside" id="i9S-AY-HyK"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MD6-5S-Io3">
-                            <rect key="frame" x="0.0" y="132.5" width="373" height="66.5"/>
+                            <rect key="frame" x="0.0" y="160" width="373" height="50"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.84680590990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="wn0-wo-AOJ"/>
+                            </constraints>
+                            <color key="tintColor" red="0.87843137979999997" green="0.79607844350000001" blue="0.49803921579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="No"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="No">
+                                        <attributes>
+                                            <font key="NSFont" size="13" name="Helvetica-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </buttonConfiguration>
                             <connections>
                                 <action selector="no:" destination="iN0-l3-epB" eventType="touchUpInside" id="gQE-BC-Bu6"/>
                             </connections>
@@ -45,12 +70,15 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="5ab-YN-M4B" secondAttribute="bottom" constant="20" id="CW9-je-fg3"/>
                 <constraint firstItem="5ab-YN-M4B" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="DWc-iP-rjC"/>
                 <constraint firstItem="5ab-YN-M4B" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="bQl-tq-xrg"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="5ab-YN-M4B" secondAttribute="trailing" constant="20" id="zrX-dH-0HO"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="noBtn" destination="MD6-5S-Io3" id="Xqd-lu-ApS"/>
+                <outlet property="yesBtn" destination="Erb-fg-oNF" id="ELF-xw-Ct7"/>
+            </connections>
             <point key="canvasLocation" x="116.66666666666667" y="-630.46875"/>
         </view>
     </objects>

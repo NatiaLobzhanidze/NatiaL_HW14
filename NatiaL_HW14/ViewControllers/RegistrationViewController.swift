@@ -22,16 +22,13 @@ class RegistrationViewController: UIViewController {
     
     var delegate: DataDelegate?
     
-    
-    var nameForLI = ""
-    var mailForLI = ""
-    var passwordForLI = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         signUpBtn.layer.cornerRadius = 15
+        
         // Do any additional setup after loading the view.
     }
+    
     
     
     @IBAction func createAccount(_ sender: UIButton) {
@@ -39,11 +36,11 @@ class RegistrationViewController: UIViewController {
         
         switch fullValidityPermision(ofUser: userName, mail: userEmail.text, password: userPassword.text, repassword: repeatPassword.text) {
             case AlertMessages.validityFails.rawValue :
-                self.presentAlert(withTitle: "Something wrong", message: AlertMessages.validityFails.rawValue)
+                self.presentAlert(withTitle: "Something Went Wrong", message: AlertMessages.validityFails.rawValue)
             case AlertMessages.secureFails.rawValue :
-                self.presentAlert(withTitle: "Something wrong", message: AlertMessages.secureFails.rawValue)
+                self.presentAlert(withTitle: "Something Went Wrong", message: AlertMessages.secureFails.rawValue)
             case AlertMessages.matchingFails.rawValue :
-                self.presentAlert(withTitle: "Something wrong", message: AlertMessages.matchingFails.rawValue)
+                self.presentAlert(withTitle: "Something Went Wrong" , message: AlertMessages.matchingFails.rawValue)
         default:
               delegate?.passData(name: userName, password: password, mail: email)
               self.navigationController?.popToRootViewController(animated: true)
@@ -52,8 +49,11 @@ class RegistrationViewController: UIViewController {
     
     @IBAction func dismissLoginBtn(_ sender: UIButton) {
         print("done")
-        guard let navC = self.navigationController else { return }
-        navC.dismiss(animated: true)
+        if self.navigationController == nil {
+            self.dismiss(animated: true)
+        } else {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
 }

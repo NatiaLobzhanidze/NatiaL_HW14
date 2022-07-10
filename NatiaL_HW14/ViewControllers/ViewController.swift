@@ -25,10 +25,6 @@ class ViewController: UIViewController {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    
-    }
     
     @IBAction func createAccount(_ sender: Any) {
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "RegistrationViewController") as? RegistrationViewController else { return }
@@ -37,18 +33,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func SignInTapped(_ sender: Any) {
-//        if forName == userName.text! && forPassword == userPassword.text! {
+        if forName == userName.text! && forPassword == userPassword.text! {
             
             let sb = UIStoryboard(name: "Details", bundle: nil)
             guard let vc = sb.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController else {return}
     // properties
-//            vc.nameText = forName ?? ""
-//            vc.mailText = forMail ?? ""
+            vc.nameText = forName ?? ""
+            vc.mailText = forMail ?? ""
             navigationController?.pushViewController(vc, animated: true)
-//        } else {
-//
-//            self.presentAlert(withTitle: "Wrong", message: "incorrect credentials")
-//        }
+        } else {
+            
+            self.presentAlert(withTitle: "Wrong", message: "incorrect credentials")
+        }
     }
     
   
