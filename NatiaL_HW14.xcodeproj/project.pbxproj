@@ -20,6 +20,7 @@
 		60680E95287ABEAF00B83001 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60680E94287ABEAF00B83001 /* DetailsViewController.swift */; };
 		60680E9C287AF80A00B83001 /* ButtomSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60680E9B287AF80A00B83001 /* ButtomSheet.xib */; };
 		60680E9E287AF95D00B83001 /* ButtomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60680E9D287AF95D00B83001 /* ButtomSheetView.swift */; };
+		60680EA1287B52C500B83001 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60680EA0287B52C500B83001 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		60680E94287ABEAF00B83001 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		60680E9B287AF80A00B83001 /* ButtomSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtomSheet.xib; sourceTree = "<group>"; };
 		60680E9D287AF95D00B83001 /* ButtomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtomSheetView.swift; sourceTree = "<group>"; };
+		60680EA0287B52C500B83001 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,14 +72,12 @@
 		60680E752879D9DE00B83001 /* NatiaL_HW14 */ = {
 			isa = PBXGroup;
 			children = (
-				60680E762879D9DE00B83001 /* AppDelegate.swift */,
-				60680E782879D9DE00B83001 /* SceneDelegate.swift */,
-				60680E98287ACA3000B83001 /* Extensions and Functions */,
-				60680E96287AC9E700B83001 /* ViewControllers */,
-				60680E97287ACA1A00B83001 /* View */,
-				60680E7F2879D9DF00B83001 /* Assets.xcassets */,
-				60680E812879D9DF00B83001 /* LaunchScreen.storyboard */,
 				60680E842879D9DF00B83001 /* Info.plist */,
+				60680EA2287B885400B83001 /* SupportFiels */,
+				60680E98287ACA3000B83001 /* Extensions and Functions */,
+				60680E9F287B52B400B83001 /* Model */,
+				60680E97287ACA1A00B83001 /* View */,
+				60680E96287AC9E700B83001 /* ViewControllers */,
 			);
 			path = NatiaL_HW14;
 			sourceTree = "<group>";
@@ -110,6 +110,25 @@
 				60680E8C287A2A5700B83001 /* Validation.swift */,
 			);
 			path = "Extensions and Functions";
+			sourceTree = "<group>";
+		};
+		60680E9F287B52B400B83001 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				60680EA0287B52C500B83001 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		60680EA2287B885400B83001 /* SupportFiels */ = {
+			isa = PBXGroup;
+			children = (
+				60680E762879D9DE00B83001 /* AppDelegate.swift */,
+				60680E782879D9DE00B83001 /* SceneDelegate.swift */,
+				60680E812879D9DF00B83001 /* LaunchScreen.storyboard */,
+				60680E7F2879D9DF00B83001 /* Assets.xcassets */,
+			);
+			path = SupportFiels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60680EA1287B52C500B83001 /* Model.swift in Sources */,
 				60680E7B2879D9DE00B83001 /* ViewController.swift in Sources */,
 				60680E772879D9DE00B83001 /* AppDelegate.swift in Sources */,
 				60680E95287ABEAF00B83001 /* DetailsViewController.swift in Sources */,

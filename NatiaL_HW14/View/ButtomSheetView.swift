@@ -20,12 +20,17 @@ class ButtomSheetView: UIView {
     
     override func layoutSubviews() { setup() }
     func setup(){
+        self.layer.borderWidth = 3
+        self.layer.borderColor = UIColor.orange.cgColor
+        self.layer.cornerRadius = 30
         yesBtn.layer.borderWidth = 1
         yesBtn.layer.borderColor = UIColor.blue.cgColor
         yesBtn.layer.cornerRadius = 20
         noBtn.layer.cornerRadius = 20
         
     }
+    
+    
     var delegate: NextMoveDelegate!
     @IBAction func yes(_ sender: Any) {
         

@@ -37,7 +37,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="T4T-sW-VBH">
                                                 <rect key="frame" x="50" y="204" width="314" height="110"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l9V-Ns-mbu">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l9V-Ns-mbu">
                                                         <rect key="frame" x="0.0" y="0.0" width="314" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="gbF-gK-6aZ"/>
@@ -45,7 +45,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="53c-8W-ogg">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="53c-8W-ogg">
                                                         <rect key="frame" x="0.0" y="65" width="314" height="45"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -165,10 +165,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 1 " translatesAutoresizingMaskIntoConstraints="NO" id="2JV-SX-Mut">
-                                                <rect key="frame" x="190" y="-86" width="291" height="660"/>
+                                                <rect key="frame" x="190" y="4" width="291" height="660"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 2" translatesAutoresizingMaskIntoConstraints="NO" id="jcO-Am-GLy">
-                                                <rect key="frame" x="0.0" y="574" width="224" height="336"/>
+                                                <rect key="frame" x="0.0" y="664" width="224" height="336"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTg-Cu-dcw">
                                                 <rect key="frame" x="50" y="50" width="200" height="107.5"/>
@@ -195,12 +195,12 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sw6-YR-Ens">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sw6-YR-Ens">
                                                         <rect key="frame" x="0.0" y="130" width="314" height="45"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="repeat password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w2J-ht-rx1" userLabel="repeat Password">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w2J-ht-rx1" userLabel="repeat Password">
                                                         <rect key="frame" x="0.0" y="195" width="314" height="45"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -230,7 +230,7 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N5f-Tt-BzK">
-                                                <rect key="frame" x="145" y="726.5" width="239" height="31"/>
+                                                <rect key="frame" x="145" y="816.5" width="239" height="31"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOz-8N-m81">
                                                         <rect key="frame" x="0.0" y="0.0" width="175.5" height="31"/>
@@ -262,7 +262,7 @@
                                             <constraint firstItem="7kd-a4-Qpa" firstAttribute="leading" secondItem="42L-or-fp5" secondAttribute="leading" id="bGp-ca-EKI"/>
                                             <constraint firstAttribute="trailing" secondItem="N5f-Tt-BzK" secondAttribute="trailing" constant="30" id="bhW-Td-TXJ"/>
                                             <constraint firstAttribute="trailing" secondItem="42L-or-fp5" secondAttribute="trailing" constant="50" id="eto-B9-Ye1"/>
-                                            <constraint firstAttribute="bottom" secondItem="jcO-Am-GLy" secondAttribute="bottom" constant="-10" id="fXB-fF-jRS"/>
+                                            <constraint firstAttribute="bottom" secondItem="jcO-Am-GLy" secondAttribute="bottom" constant="-100" id="fXB-fF-jRS"/>
                                             <constraint firstItem="7kd-a4-Qpa" firstAttribute="top" secondItem="42L-or-fp5" secondAttribute="bottom" constant="50" id="gmr-uG-Ode"/>
                                             <constraint firstItem="42L-or-fp5" firstAttribute="top" secondItem="FTg-Cu-dcw" secondAttribute="bottom" constant="100" id="vyO-eg-a1C"/>
                                             <constraint firstAttribute="trailing" secondItem="2JV-SX-Mut" secondAttribute="trailing" constant="-67" id="zQM-99-ec5"/>
@@ -284,6 +284,7 @@
                             <constraint firstItem="2JV-SX-Mut" firstAttribute="height" secondItem="NYG-ZF-mmQ" secondAttribute="height" multiplier="550:750" id="ATt-ha-nbf"/>
                             <constraint firstItem="1bk-1d-743" firstAttribute="top" secondItem="NYG-ZF-mmQ" secondAttribute="top" id="CTh-3I-xWP"/>
                             <constraint firstItem="jcO-Am-GLy" firstAttribute="height" secondItem="NYG-ZF-mmQ" secondAttribute="height" multiplier="280:750" id="F3K-0A-73S"/>
+                            <constraint firstItem="1bk-1d-743" firstAttribute="height" secondItem="NYG-ZF-mmQ" secondAttribute="height" id="Utr-Ii-TFR"/>
                             <constraint firstItem="Ahn-ac-s7l" firstAttribute="height" secondItem="NYG-ZF-mmQ" secondAttribute="height" id="dol-eh-MhN"/>
                             <constraint firstAttribute="bottom" secondItem="1bk-1d-743" secondAttribute="bottom" id="gQm-2q-Wqm"/>
                             <constraint firstItem="Ahn-ac-s7l" firstAttribute="width" secondItem="NYG-ZF-mmQ" secondAttribute="width" id="nbZ-tO-cUO"/>

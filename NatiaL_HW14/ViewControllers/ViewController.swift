@@ -14,17 +14,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var userPassword: UITextField!
     @IBOutlet weak var signUpBtn: UIButton!
     
-    
-    var forName: String?
-    var forPassword: String?
-    var forMail: String?
+    var userInfo: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         signInBtn.layer.cornerRadius = 15
-        
     }
-    
     
     @IBAction func createAccount(_ sender: Any) {
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "RegistrationViewController") as? RegistrationViewController else { return }
@@ -33,32 +28,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func SignInTapped(_ sender: Any) {
-        if forName == userName.text! && forPassword == userPassword.text! {
+        if userInfo?.name == userName.text! && userInfo?.password == userPassword.text{
             
             let sb = UIStoryboard(name: "Details", bundle: nil)
             guard let vc = sb.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController else {return}
-    // properties
-            vc.nameText = forName ?? ""
-            vc.mailText = forMail ?? ""
+            vc.nameText = userInfo?.name ?? ""
+            vc.mailText = userInfo?.mail ?? ""
             navigationController?.pushViewController(vc, animated: true)
         } else {
-            
-            self.presentAlert(withTitle: "Wrong", message: "incorrect credentials")
+            self.presentAlert(withTitle: "Something went wrong", message: "incorrect credentials")
         }
     }
-    
-  
 }
-
-
 extension ViewController: DataDelegate {
-    func passData(name: String?, password: String?, mail: String?)  {
-        guard  let savedname = name, let savedPassword = password, let savedMail = mail  else { return }
-        
-        self.forName = savedname
-        self.forPassword = savedPassword
-        self.forMail = savedMail
+    func passUserData(by user: User) {
+        self.userInfo = user
     }
-
 }
 

@@ -8,11 +8,12 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-
+    
     @IBOutlet weak var signOut: UIButton!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var welcomeBack: UILabel!
     @IBOutlet weak var mailLabel: UILabel!
+    
     var nameText = ""
     var mailText = ""
     
@@ -25,18 +26,16 @@ class DetailsViewController: UIViewController {
         userNameLabel.text = nameText
         mailLabel.text = mailText
     }
+    
     @IBAction func signOut(_ sender: UIButton) {
         addView()
     }
     func addView(){
-        
-   
-        myView?.frame = CGRect(x: 10, y: UIScreen.main.bounds.height - (UIScreen.main.bounds.height / 2.3 ), width: UIScreen.main.bounds.width - 20, height: UIScreen.main.bounds.height / 2.3
-        )
+        guard let myview = myView else { return }
+        myview.frame = CGRect(x: 10, y: UIScreen.main.bounds.height - (UIScreen.main.bounds.height / 2.3 ), width: UIScreen.main.bounds.width - 20, height: UIScreen.main.bounds.height / 2.3)
         view.layer.cornerRadius = 10
-        myView?.delegate = self
-        view.addSubview(myView!)
-        
+        myview.delegate = self
+        view.addSubview(myview)
     }
 }
 extension DetailsViewController : NextMoveDelegate {
@@ -51,6 +50,4 @@ extension DetailsViewController : NextMoveDelegate {
             myView?.removeFromSuperview()
         }
     }
-    
-    
 }

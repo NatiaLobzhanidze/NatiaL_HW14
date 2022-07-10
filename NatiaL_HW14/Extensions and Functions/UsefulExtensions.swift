@@ -18,8 +18,4 @@ extension UIViewController {
   }
 }
 
-extension UITextField {
-    func cornedRad(by radius: Int) {
-        self.layer.cornerRadius = CGFloat(radius)
-    }
-}
+

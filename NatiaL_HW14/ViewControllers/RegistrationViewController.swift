@@ -8,7 +8,7 @@
 import UIKit
 
 protocol DataDelegate {
-    func passData(name: String?,  password: String?, mail: String?)
+    func passUserData(by user: User)
 }
 
 class RegistrationViewController: UIViewController {
@@ -21,30 +21,25 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var repeatPassword: UITextField!
     
     var delegate: DataDelegate?
-    
+    let validation = Validation()
     override func viewDidLoad() {
         super.viewDidLoad()
         signUpBtn.layer.cornerRadius = 15
-        
-        // Do any additional setup after loading the view.
     }
-    
-    
     
     @IBAction func createAccount(_ sender: UIButton) {
         guard let userName = userName.text, let password = userPassword.text, let email = userEmail.text  else { return }
-        
-        switch fullValidityPermision(ofUser: userName, mail: userEmail.text, password: userPassword.text, repassword: repeatPassword.text) {
-            case AlertMessages.validityFails.rawValue :
-                self.presentAlert(withTitle: "Something Went Wrong", message: AlertMessages.validityFails.rawValue)
-            case AlertMessages.secureFails.rawValue :
-                self.presentAlert(withTitle: "Something Went Wrong", message: AlertMessages.secureFails.rawValue)
-            case AlertMessages.matchingFails.rawValue :
-                self.presentAlert(withTitle: "Something Went Wrong" , message: AlertMessages.matchingFails.rawValue)
+        switch validation.fullValPermission(for: User(name: userName, mail: email, password: password), rePassword: repeatPassword.text) {
+        case AlertMessages.validityFails.rawValue :
+            self.presentAlert(withTitle: "Something Went Wrong", message: AlertMessages.validityFails.rawValue)
+        case AlertMessages.secureFails.rawValue :
+            self.presentAlert(withTitle: "Something Went Wrong", message: AlertMessages.secureFails.rawValue)
+        case AlertMessages.matchingFails.rawValue :
+            self.presentAlert(withTitle: "Something Went Wrong" , message: AlertMessages.matchingFails.rawValue)
         default:
-              delegate?.passData(name: userName, password: password, mail: email)
-              self.navigationController?.popToRootViewController(animated: true)
-            }
+            delegate?.passUserData(by: User(name: userName, mail: email, password: password))
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
     
     @IBAction func dismissLoginBtn(_ sender: UIButton) {
