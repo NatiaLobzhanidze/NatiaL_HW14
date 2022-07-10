@@ -35,23 +35,19 @@ class RegistrationViewController: UIViewController {
     
     
     @IBAction func createAccount(_ sender: UIButton) {
-        guard let navC = self.navigationController, let username = userName.text, let password = userPassword.text, let usersMail =  userEmail.text else { return }
-        switch fullValidityPermision(ofUser: userName.text, mail: userEmail.text, password: userPassword.text, repassword: repeatPassword.text) {
-        case AlertMessages.validityFails.rawValue :
-            self.presentAlert(withTitle: "Something wrong", message: AlertMessages.validityFails.rawValue)
-        case AlertMessages.secureFails.rawValue :
-            self.presentAlert(withTitle: "Something wrong", message: AlertMessages.secureFails.rawValue)
-        case AlertMessages.matchingFails.rawValue :
-            self.presentAlert(withTitle: "Something wrong", message: AlertMessages.matchingFails.rawValue)
-            
-        default:
-            //გადმოაწოდოს მონაცემები
-            
-            delegate?.passData(name: username, password: password, mail: usersMail)
-            
-            navC.popToRootViewController(animated: true)
-        }
+        guard let userName = userName.text, let password = userPassword.text, let email = userEmail.text  else { return }
         
+        switch fullValidityPermision(ofUser: userName, mail: userEmail.text, password: userPassword.text, repassword: repeatPassword.text) {
+            case AlertMessages.validityFails.rawValue :
+                self.presentAlert(withTitle: "Something wrong", message: AlertMessages.validityFails.rawValue)
+            case AlertMessages.secureFails.rawValue :
+                self.presentAlert(withTitle: "Something wrong", message: AlertMessages.secureFails.rawValue)
+            case AlertMessages.matchingFails.rawValue :
+                self.presentAlert(withTitle: "Something wrong", message: AlertMessages.matchingFails.rawValue)
+        default:
+              delegate?.passData(name: userName, password: password, mail: email)
+              self.navigationController?.popToRootViewController(animated: true)
+            }
     }
     
     @IBAction func dismissLoginBtn(_ sender: UIButton) {

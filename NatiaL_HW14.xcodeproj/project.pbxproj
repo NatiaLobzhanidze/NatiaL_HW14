@@ -18,6 +18,8 @@
 		60680E8F287A3EFD00B83001 /* UsefulExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60680E8E287A3EFD00B83001 /* UsefulExtensions.swift */; };
 		60680E93287ABE9700B83001 /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60680E92287ABE9700B83001 /* Details.storyboard */; };
 		60680E95287ABEAF00B83001 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60680E94287ABEAF00B83001 /* DetailsViewController.swift */; };
+		60680E9C287AF80A00B83001 /* ButtomSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60680E9B287AF80A00B83001 /* ButtomSheet.xib */; };
+		60680E9E287AF95D00B83001 /* ButtomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60680E9D287AF95D00B83001 /* ButtomSheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		60680E8E287A3EFD00B83001 /* UsefulExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsefulExtensions.swift; sourceTree = "<group>"; };
 		60680E92287ABE9700B83001 /* Details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
 		60680E94287ABEAF00B83001 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		60680E9B287AF80A00B83001 /* ButtomSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtomSheet.xib; sourceTree = "<group>"; };
+		60680E9D287AF95D00B83001 /* ButtomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtomSheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 		60680E97287ACA1A00B83001 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				60680E9B287AF80A00B83001 /* ButtomSheet.xib */,
+				60680E9D287AF95D00B83001 /* ButtomSheetView.swift */,
 				60680E7C2879D9DE00B83001 /* Main.storyboard */,
 				60680E92287ABE9700B83001 /* Details.storyboard */,
 			);
@@ -167,6 +173,7 @@
 				60680E832879D9DF00B83001 /* LaunchScreen.storyboard in Resources */,
 				60680E802879D9DF00B83001 /* Assets.xcassets in Resources */,
 				60680E7E2879D9DE00B83001 /* Main.storyboard in Resources */,
+				60680E9C287AF80A00B83001 /* ButtomSheet.xib in Resources */,
 				60680E93287ABE9700B83001 /* Details.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,6 +192,7 @@
 				60680E8F287A3EFD00B83001 /* UsefulExtensions.swift in Sources */,
 				60680E8D287A2A5700B83001 /* Validation.swift in Sources */,
 				60680E792879D9DE00B83001 /* SceneDelegate.swift in Sources */,
+				60680E9E287AF95D00B83001 /* ButtomSheetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NatiaL_HW14" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="NatiaL_HW14" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,7 +89,7 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Sign up"/>
                                                         <connections>
-                                                            <segue destination="AWo-ea-59D" kind="show" id="FGB-h9-FMr"/>
+                                                            <action selector="createAccount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uXR-Qb-blW"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -141,6 +141,7 @@
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="signInBtn" destination="awv-Bh-2HA" id="8up-4i-TyH"/>
+                        <outlet property="signUpBtn" destination="832-Q7-zqP" id="sNQ-ml-WHo"/>
                         <outlet property="userName" destination="l9V-Ns-mbu" id="tKY-cu-laE"/>
                         <outlet property="userPassword" destination="53c-8W-ogg" id="5C3-2X-AkI"/>
                     </connections>
